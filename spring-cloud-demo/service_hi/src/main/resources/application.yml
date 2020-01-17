@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: com.zr.service-hi
+    name: service-hi
 
   datasource:
     druid:
