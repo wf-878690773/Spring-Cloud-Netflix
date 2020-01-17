@@ -1,0 +1,30 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    name: com.zr.service-hi
+
+  datasource:
+    druid:
+      url: jdbc:mysql://172.3.12.6:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
+
+
+
+mybatis:
+  type-aliases-package: 实体类的存放路径，如：com.funtl.hello.spring.boot.entity
+  mapper-locations: classpath:mapper/*.xml
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/   #服务的注册中心地址
